@@ -3,36 +3,41 @@
 variable "do_token" {}
 
 variable "region" {
-  type = string
+  type    = string
   default = "nyc1" # Regions list: `doctl kubernetes options regions`
 }
 
 variable "cluster_name" {
-  type = string
+  type    = string
   default = "asyncapi-demo"
 }
 
 variable "cluster_version" {
-  type = string
+  type    = string
   default = "1.21.5-do.0" # Versions list: `doctl kubernetes options versions`
 }
 
 variable "cluster_node_pool_name" {
-  type = string
+  type    = string
   default = "asyncapi-demo-pool"
 }
 
 variable "cluster_node_size" {
-  type = string
+  type    = string
   default = "s-2vcpu-4gb" # Sizes list: `doctl kubernetes options sizes`
 }
 
+variable "cluster_node_auto_scale" {
+  type    = bool
+  default = false
+}
+
 variable "cluster_node_count_min" {
-  type = number
+  type    = number
   default = 3
 }
 
 variable "cluster_node_count_max" {
-  type = number
+  type    = number
   default = 5
 }

@@ -13,14 +13,14 @@ provider "digitalocean" {
 }
 
 resource "digitalocean_kubernetes_cluster" "asyncapi-k8s-cluster" {
-  name   = var.cluster_name
-  region = var.region
+  name    = var.cluster_name
+  region  = var.region
   version = var.cluster_version
 
   node_pool {
     name       = var.cluster_node_pool_name
     size       = var.cluster_node_size
-    auto_scale = true
+    auto_scale = var.cluster_node_auto_scale
     min_nodes  = var.cluster_node_count_min
     max_nodes  = var.cluster_node_count_max
   }
