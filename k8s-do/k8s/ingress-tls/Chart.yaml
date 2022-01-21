@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ingress-tls
-description: ingress-tls installs and configures cert-manager, an ingress controller and a Let's Encrypt Issuer for automating TLS Certificates on AsyncAPI K8s services.
+description: "`ingress-tls` installs and configures `cert-manager`, an `Ingress Controller` and a Let's Encrypt Issuer for automating TLS Certificates on AsyncAPI K8s services."
 type: application
 version: 0.1.0
 appVersion: "v1.6.1" # version of cert-manager

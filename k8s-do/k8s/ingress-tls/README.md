@@ -2,7 +2,7 @@
 
 ![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.6.1](https://img.shields.io/badge/AppVersion-v1.6.1-informational?style=flat-square)
 
-ingress-tls installs and configures cert-manager, an ingress controller and a Let's Encrypt Issuer for automating TLS Certificates on AsyncAPI K8s services.
+`ingress-tls` installs and configures `cert-manager`, an `Ingress Controller` and a Let's Encrypt Issuer for automating TLS Certificates on AsyncAPI K8s services.
 
 ## Requirements
 
@@ -17,8 +17,8 @@ ingress-tls installs and configures cert-manager, an ingress controller and a Le
 |-----|------|---------|-------------|
 | cert-manager.installCRDs | bool | `true` |  |
 | certificates.issuer.acme.email | string | `"info@asyncapi.io"` |  |
-| certificates.issuer.acme.secret | string | `"letsencrypt-prod"` |  |
 | certificates.issuer.acme.server | string | `"https://acme-v02.api.letsencrypt.org/directory"` |  |
+| certificates.issuer.acme.tokenSecretDestination | string | `"letsencrypt-prod"` |  |
 | certificates.issuer.name | string | `"letsencrypt-prod"` |  |
 | certificates.issuer.namespace | string | `"default"` |  |
 
